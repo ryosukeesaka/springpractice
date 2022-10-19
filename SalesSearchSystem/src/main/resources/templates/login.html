@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+	<link th:href="@{/css/stylecssforlogin.css}" rel="stylesheet">
+	<meta charset="utf-8" />
+	<title>Login page</title>
+</head>
+
+<body class="text-center">
+	<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+		<div class="container">
+			<span class="skiplink-text">Skip to main content</span>
+		</div>
+	</a>
+
+	<form class="form-signin" th:action="@{/sign_up}" method="post">
+		<p th:if="${loginError}">
+			<em>ユーザーネームかパスワードが間違っています。</em>
+		</p>
+
+
+		<h1 class="h3 mb-3 font-weight-normal">ログイン</h1>
+
+		<label for="username" class="sr-only">ユーザーネーム</label>
+		<input class="form-control" type="text" id="username" name="username" placeholder="ユーザーID"
+			autofocus="autofocus" />
+
+		<label for="password" class="sr-only">パスワード</label>
+
+		<input type="password" class="form-control" placeholder="パスワード" id="password" name="password" />
+
+
+
+		<input type="submit" class="btn btn-lg btn-info btn-block" value="LogIn" />
+
+	</form>
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script>
+		window.jQuery
+			|| document
+				.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+	<script src="/docs/4.5/assets/js/vendor/anchor.min.js"></script>
+	<script src="/docs/4.5/assets/js/vendor/clipboard.min.js"></script>
+	<script src="/docs/4.5/assets/js/vendor/bs-custom-file-input.min.js"></script>
+	<script src="/docs/4.5/assets/js/src/application.js"></script>
+	<script src="/docs/4.5/assets/js/src/search.js"></script>
+	<script src="/docs/4.5/assets/js/src/ie-emulation-modes-warning.js"></script>
+</body>
+
+
+</html>
